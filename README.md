@@ -1,6 +1,6 @@
 main-yarn-files
 ================
-![status](https://secure.travis-ci.org/aimad_majdou/main-yarn-files.png?branch=master)
+![status](https://travis-ci.org/aimad-majdou/main-yarn-files.svg?branch=master)
 
 - [Usage](#usage)
     - [Usage with gulp](#usage-with-gulp)
