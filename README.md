@@ -1,4 +1,4 @@
-main-bower-files
+main-yarn-files
 ================
 ![status](https://secure.travis-ci.org/aimad_majdou/main-yarn-files.png?branch=master)
 
@@ -19,8 +19,8 @@ main-bower-files
 ## Usage
 
 ```javascript
-var mainBowerFiles = require('main-bower-files');
-var files = mainBowerFiles([[filter, ]options][, callback]);
+var mainBowerFiles = require('main-yarn-files');
+var files = mainYarnFiles([[filter, ]options][, callback]);
 ```
 
 If first argument is type of `String`, `Array` or `RegExp` it will be used as a filter, otherwise it will be used as options.
@@ -33,7 +33,7 @@ You can override the behavior if you add an `overrides` property to your own `pa
 
 ```javascript
 var gulp = require('gulp');
-var mainBowerFiles = require('main-yarn-files');
+var mainYarnFiles = require('main-yarn-files');
 
 gulp.task('TASKNAME', function() {
     return gulp.src(mainYarnFiles())
@@ -43,13 +43,13 @@ gulp.task('TASKNAME', function() {
 
 #### You've got a flat folder/file structure after `.pipe(gulp.dest('my/dest/path'))`?
 
-`mainYarnFiles` returns an array of files where each file is a absolute path without any globs (** or *). gulp requires globs in these paths to apply the base path. Because of this, you always have to tell gulp your bower base path (the path to the node_modules/@bower_components directory) explicitly.
+`mainYarnFiles` returns an array of files where each file is a absolute path without any globs (** or *). gulp requires globs in these paths to apply the base path. Because of this, you always have to tell gulp your dependencies base path (the path to the node_modules/@bower_components directory) explicitly.
 
 Here is an example:
 
 ```javascript
 var gulp = require('gulp');
-var mainBowerFiles = require('main-yarn-files');
+var mainYarnFiles = require('main-yarn-files');
 
 gulp.task('TASKNAME', function() {
     return gulp.src(mainYarnFiles(/* options */), { base: 'path/to/node_modules/@bower_components' })
@@ -59,7 +59,7 @@ gulp.task('TASKNAME', function() {
 Or:
 
 gulp.task('TASKNAME', function() {
-    return gulp.src(mainBowerFiles({
+    return gulp.src(mainYarnFiles({
 			paths: {
 				modulesFolder: nrhSrc + '/bower_components'
 			}
@@ -110,7 +110,7 @@ If `process.env.NODE_ENV` is not set you can use this option.
 
 Type: `Object` or `String`
 
-You can specify the paths where the following bower specific files are located:
+You can specify the paths where the following yarn specific files are located:
 
 `node_modules/@bower_components` and `package.json`
 
