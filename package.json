@@ -1,14 +1,14 @@
 {
-  "name": "main-bower-files",
-  "version": "2.13.2",
-  "description": "Get main files from your installed bower packages.",
+  "name": "main-yarn-files",
+  "version": "0.0.2",
+  "description": "Get main files from your installed yarn packages.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ck86/main-bower-files.git"
+    "url": "git://github.com/aimad-majdou/main-yarn-files.git"
   },
   "keywords": [
     "bower",
@@ -16,12 +16,12 @@
     "gulpfriendly",
     "gruntplugin"
   ],
-  "author": "Christopher Knötschke",
+  "author": "Aimad MAJDOU",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ck86/main-bower-files/issues"
+    "url": "https://github.com/aimad-majdou/main-yarn-files/issues"
   },
-  "homepage": "https://github.com/ck86/main-bower-files",
+  "homepage": "https://github.com/aimad-majdou/main-yarn-files",
   "dependencies": {
     "chalk": "^1.0.0",
     "extend": "^2.0.1",
