@@ -18,6 +18,9 @@ main-yarn-files
 
 ## Usage
 
+This plugin wil work only with gulp (feel free to add grunt support).
+This plugin is a replacement for the `main-bower-files` plugin when migrating from bower to yarn, with less options, and it will only list modules declared in `dependencies` and not the ones delcared in `devDependencies`.
+
 ```javascript
 var mainBowerFiles = require('main-yarn-files');
 var files = mainYarnFiles([[filter, ]options][, callback]);
