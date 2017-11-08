@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(grunt) {
-    var mainBowerFiles = require('..');
+    var mainYarnFiles = require('..');
     var vfs = require('vinyl-fs');
 
     grunt.registerMultiTask('yarn', 'Copy Yarn packages to the destination folder.', function() {
