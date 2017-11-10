@@ -1,6 +1,6 @@
 {
   "name": "main-yarn-files",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "Get main files from your installed yarn packages.",
   "main": "index.js",
   "repository": {
