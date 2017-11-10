@@ -1,7 +1,7 @@
 main-yarn-files
 ================
 ![status](https://travis-ci.org/aimad-majdou/main-yarn-files.svg?branch=master)
-![npm version](https://badge.fury.io/js/main-yarn-files.png)](https://badge.fury.io/js/main-yarn-files)
+[![npm version](https://badge.fury.io/js/main-yarn-files.png)](https://badge.fury.io/js/main-yarn-files)
 
 - [Usage](#usage)
     - [Usage with gulp](#usage-with-gulp)
