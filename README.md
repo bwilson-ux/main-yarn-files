@@ -83,6 +83,8 @@ Now you should get something like `my/dest/path/jquery/jquery.js` if you have jq
 
 ## Options
 
+### Overrides Options
+
 #### ignore
 
 Type: `Boolean` Default: `false`
