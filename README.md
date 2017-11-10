@@ -3,6 +3,7 @@ main-yarn-files
 ![status](https://travis-ci.org/aimad-majdou/main-yarn-files.svg?branch=master)
 [![npm version](https://badge.fury.io/js/main-yarn-files.svg)](https://badge.fury.io/js/main-yarn-files)
 
+- [Installation](#installation)
 - [Usage](#usage)
     - [Usage with gulp](#usage-with-gulp)
 - [Options](#options)
@@ -17,10 +18,16 @@ main-yarn-files
         - [checkExistence](#checkexistence)
         - [filter](#filter)
 
-## Usage
-
 >This plugin only works with gulp (feel free to add grunt support).
 >This plugin is a replacement for the `main-bower-files` plugin when migrating from bower to yarn, with less options, and it will only list modules declared in `dependencies` and not the ones delcared in `devDependencies`.
+
+## Installation
+
+__with npm:__ npm install main-yarn-files
+
+__with yarn:__ yarn add main-yarn-files
+
+## Usage
 
 ```javascript
 var mainYarnFiles = require('main-yarn-files');
