@@ -15,6 +15,7 @@ main-yarn-files
         - [main](#main)
         - [env](#env)
         - [paths](#paths)
+        - [scope](#scope)
         - [checkExistence](#checkexistence)
         - [filter](#filter)
 
@@ -54,7 +55,7 @@ gulp.task('TASKNAME', function() {
 
 #### You've got a flat folder/file structure after `.pipe(gulp.dest('my/dest/path'))`?
 
-`mainYarnFiles` returns an array of files where each file is a absolute path without any globs (** or *). gulp requires globs in these paths to apply the base path. Because of this, you always have to tell gulp your dependencies base path (the path to the node_modules/@bower_components directory) explicitly.
+`mainYarnFiles` returns an array of files where each file is a absolute path without any globs (** or *). gulp requires globs in these paths to apply the base path. Because of this, you always have to tell gulp your dependencies base path (the path to the node_modules/@bower directory) explicitly.
 
 Here is an example:
 
@@ -63,7 +64,7 @@ var gulp = require('gulp');
 var mainYarnFiles = require('main-yarn-files');
 
 gulp.task('TASKNAME', function() {
-    return gulp.src(mainYarnFiles(/* options */), { base: 'path/to/node_modules/@bower_components' })
+    return gulp.src(mainYarnFiles(/* options */), { base: 'path/to/node_modules/@bower' })
         .pipe(/* what you want to do with the files */)
 });
 
@@ -125,14 +126,14 @@ Type: `Object` or `String`
 
 You can specify the paths where the following yarn specific files are located:
 
-`node_modules/@bower_components` and `package.json`
+`node_modules/@bower` and `package.json`
 
 For example:
 
 ```javascript
 mainYarnFiles({
     paths: {
-        modulesFolder: 'path/for/node_modules/@bower_components',
+        modulesFolder: 'path/for/node_modules/@bower',
         jsonFile: 'path/for/package.json'
     }
 })
@@ -147,10 +148,26 @@ For example:
 mainYarnFiles({ paths: 'path/for/project' });
 /*
     {
-        modulesFolder: 'path/for/node_modules/@bower_components',
+        modulesFolder: 'path/for/node_modules/@bower',
         jsonFile: 'path/for/package.json'
     }
 */
+```
+#### paths
+
+Type: `String` Default: `@bower`
+
+The scope used for dependencies declared in the package.json dependencies section (More infos about this : https://github.com/bower/bower/issues/2467#issue-239235304).
+
+For example:
+
+```
+yarnFiles({
+	paths: {
+		modulesFolder: nrhSrcLibs
+	},
+	scope: nrhSrcLibsScope
+})
 ```
 
 #### checkExistence
