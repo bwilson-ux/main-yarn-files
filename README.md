@@ -153,7 +153,7 @@ mainYarnFiles({ paths: 'path/for/project' });
     }
 */
 ```
-#### paths
+#### scope
 
 Type: `String` Default: `@bower`
 
